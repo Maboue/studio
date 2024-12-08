@@ -13,30 +13,54 @@
         body, html {
             height: 100%;
             font-family: Arial, sans-serif;
+            overflow: hidden; /* Prevent unwanted scroll */
         }
         body {
             display: flex;
             justify-content: center;
-            align-items: center;
-            background: url('IMG_9738.jpeg') no-repeat center center/cover;
+            align-items: flex-start;
+            background: url('IMG_9738.jpeg') no-repeat top center;
+            background-size: cover; /* Ensures the image scales properly */
             color: white;
             text-align: center;
             padding: 20px;
+            animation: fadeInBackground 1.5s ease-in-out; /* Smooth background fade */
+        }
+        @keyframes fadeInBackground {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
         .content {
-            background: rgba(0, 0, 0, 0.5); /* Add a translucent black overlay for better readability */
-            padding: 20px;
-            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.7); /* Slightly darker for better contrast */
+            padding: 30px;
+            border-radius: 15px;
             max-width: 600px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            animation: slideIn 1.2s ease-out; /* Text sliding animation */
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
         h1 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
         }
         p {
-            font-size: 1.2rem;
-            line-height: 1.5;
+            font-size: 1.3rem;
+            line-height: 1.8;
         }
     </style>
 </head>
