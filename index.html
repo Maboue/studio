@@ -17,7 +17,7 @@
             overflow-x: hidden; /* Prevent horizontal scroll */
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
                         url('landing.jpeg') no-repeat center top;
             background-size: cover;
@@ -28,17 +28,12 @@
             text-align: center;
         }
         .content {
-            display: flex;
-            justify-content: space-between;
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-        }
-        .column {
-            width: 48%; /* Adjust the width of each column */
             padding: 20px;
         }
-        .column p {
+        .content p {
             font-size: 1.8rem;
             line-height: 1.5;
             font-weight: 400;
@@ -46,7 +41,7 @@
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
             max-width: 700px;
             margin: 0 auto;
-            text-align: justify; /* Justify text in both columns */
+            text-align: center; /* Center the text */
         }
         h1 {
             font-size: 3.5rem; /* Larger title */
@@ -72,17 +67,19 @@
             content: "”";
             right: -50px;
         }
-    </style>
-</head>
-<body>
-    <h1>atelier maboue</h1>
-    <div class="content">
-        <div class="column">
-            <p>I collaborate with designers to create custom art pieces that align perfectly with the spaces they imagine, the materials they choose, and the stories they tell. Because art should feel essential.</p>
-        </div>
-        <div class="column">
-            <p>En collaboration étroite avec des designers, je crée des œuvres d’art sur mesure, en parfaite harmonie avec les espaces qu’ils imaginent, les matériaux qu’ils choisissent et les récits qu’ils tissent. Car l’art est le trait d’union entre les espaces et les histoires.</p>
-        </div>
-    </div>
-</body>
-</html>
+
+        /* Styles for the images section */
+        .images-container {
+            width: 100%;
+            background-color: black;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .images-container img {
+            width: 30%; /* Each image takes up 30% of the container width */
+            height: auto;
+            border: 5px solid white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6
