@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Landing Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,34 +14,34 @@
         }
         body, html {
             height: 100%;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             overflow-x: hidden; /* Prevent horizontal scroll */
         }
         body {
             display: flex;
-            flex-direction: column; /* Stack elements vertically */
-            justify-content: flex-start; /* Start content at the top */
+            flex-direction: column;
+            justify-content: flex-start;
             align-items: center;
             background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
                         url('landing.jpeg') no-repeat center top;
             background-size: cover;
-            background-attachment: fixed; /* Allows the image to scroll with the page */
-            min-height: 200vh; /* Make the background scroll down further */
+            background-attachment: fixed; /* Make the image scroll with the page */
+            min-height: 200vh; /* Extend the scroll area */
             color: white;
             text-align: center;
             padding: 20px;
         }
         .content {
             padding: 30px;
-            margin-top: 125px; /* Move the content higher on the page */
+            margin-top: 50px; /* Move the content higher */
             max-width: 800px;
         }
         h1 {
-            font-size: 3rem; 
-            margin-bottom: 1rem; /* Reduce margin to bring the heading closer to the paragraph */
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-weight: 500; 
+            font-size: 3.5rem; /* Larger title */
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+            font-variant: small-caps; /* Apply small caps */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
         p {
@@ -55,10 +56,10 @@
             position: relative;
         }
         p::before, p::after {
-            font-family: 'Playfair Display', serif; 
+            font-family: 'Cormorant Garamond', serif;
             font-size: 5rem;
             font-weight: 700;
-            color: white; 
+            color: white;
             position: absolute;
             top: -20px;
         }
@@ -74,8 +75,8 @@
 </head>
 <body>
     <div class="content">
-        <h1></h1>
-        <p>I collaborate with designers to create custom art pieces that align perfectly with the spaces they imagine, the materials they choose, and the stories they tell.Because art should feel essential.</p>
+        <h1>atelier maboue</h1>
+        <p>I collaborate with designers to create custom art pieces that align perfectly with the spaces they imagine, the materials they choose, and the stories they tell. Because art should feel essential.</p>
     </div>
 </body>
 </html>
