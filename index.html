@@ -20,10 +20,11 @@
     /* Background image and opacity */
     body {
       background: url('PhotoSiteBack.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background-size: cover; /* Ensures the background covers the entire screen */
       position: relative;
-      overflow-y: auto; /* Make page scrollable */
-    
+      overflow-y: auto; /* Makes the page scrollable */
+    }
+
     body::before {
       content: '';
       position: fixed;
@@ -49,9 +50,9 @@
     /* Paragraph styling */
     .center-content p {
       color: white;
-      font-size: 1.2em;
+      font-size: 1.8em; /* Adjusted text size for better visibility */
       line-height: 1.6;
-      max-width: 300px; /* Slightly narrower width */
+      max-width: 500px; /* Slightly narrower width */
       margin: 0 auto 20px;
     }
 
