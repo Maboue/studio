@@ -49,10 +49,35 @@
       padding: 20px;
     }
 
-    /* Paragraph styling */
+    /* Main paragraph styling */
     .center-content p {
       font-size: 2em;
       line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    /* New paragraph in quotation marks */
+    .quote {
+      font-size: 1.4em; /* Smaller size for the quote */
+      font-style: italic;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .quote::before, .quote::after {
+      content: '"'; /* Adds quotation marks */
+      position: absolute;
+      font-size: 3em;
+      top: -10px;
+      color: white;
+    }
+
+    .quote::before {
+      left: -30px;
+    }
+
+    .quote::after {
+      right: -30px;
     }
 
     /* Link (Get in Touch button) styling */
@@ -79,8 +104,11 @@
 <body>
   <div class="center-content">
     <p>l’art comme trait d’union,<br> entre le visible et l’invisible.</p>
+
+    <!-- New paragraph inside quotation marks -->
+    <p class="quote">Un atelier d’art se spécialisant dans la création d’œuvres sur mesure, en parfaite harmonie avec les espaces, les matériaux et les visions des designers d’intérieur. Chaque oeuvre comme une virgule au bon endroit, ajoutant rythme et clarté à chaque projet. En travaillant main dans la main avec les designers, nous créons des pièces uniques qui complètent leur vision et deviennent des éléments essentiels du design.</p>
+
     <a href="mailto:so@maboue.com">Get in Touch</a>
   </div>
 </body>
 </html>
-
