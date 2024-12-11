@@ -47,45 +47,13 @@
       padding: 20px;
     }
 
-    /* Black semi-opaque circle */
-    .text-wrapper {
-      position: relative;
-      background: rgba(0, 0, 0, 0.8); /* Semi-opaque black */
-      border-radius: 50%;
-      padding: 50px;
-      max-width: 80%;
-      width: 400px; /* Fixed width for consistency */
-    }
-
     /* Paragraph styling */
-    .text-wrapper p {
+    .center-content p {
       color: white;
       font-size: 1.2em;
       line-height: 1.6;
-      max-width: 300px; /* Reduce width */
-      margin: 0 auto;
-      position: relative;
-    }
-
-    /* Large quotation marks */
-    .text-wrapper p::before, 
-    .text-wrapper p::after {
-      content: '“'; /* Start and end with large quotes */
-      font-size: 4em;
-      color: rgba(255, 255, 255, 0.5); /* Subtle white */
-      position: absolute;
-      font-weight: bold;
-    }
-
-    .text-wrapper p::before {
-      top: -40px;
-      left: -30px;
-    }
-
-    .text-wrapper p::after {
-      content: '”';
-      bottom: -40px;
-      right: -30px;
+      max-width: 600px; /* Slightly narrower width */
+      margin: 0 auto 20px;
     }
 
     /* Link styling */
@@ -109,12 +77,10 @@
 </head>
 <body>
   <div class="center-content">
-    <div class="text-wrapper">
-      <p>
-        En collaboration étroite avec les designers, je crée des œuvres d’art sur mesure, en parfaite harmonie avec les espaces qu’ils imaginent, les matériaux qu’ils choisissent et les récits qu’ils tissent. 
-        Pour que l’art puisse agir comme un trait d’union, entre le visible et l’invisible.
-      </p>
-    </div>
+    <p>
+      En collaboration étroite avec les designers, je crée des œuvres d’art sur mesure, en parfaite harmonie avec les espaces qu’ils imaginent, les matériaux qu’ils choisissent et les récits qu’ils tissent. 
+      Pour que l’art puisse agir comme un trait d’union, entre le visible et l’invisible.
+    </p>
     <a href="mailto:your-email@example.com">Get in Touch</a>
   </div>
 </body>
