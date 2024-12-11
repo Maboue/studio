@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -13,7 +14,7 @@
 
     body, html {
       height: 100%;
-      font-family: Arial, sans-serif;
+      font-family: 'Playfair Display', serif;
     }
 
     /* Background image and opacity */
@@ -43,19 +44,24 @@
       text-align: center;
       color: white;
       font-size: 1.5em; /* Adjust font size as needed */
-      font-variant:;
       flex-direction: column;
     }
 
     .center-content a {
-      color: #00bfff; /* Link color */
+      color: white; /* Initial link color */
       text-decoration: none;
       font-weight: bold;
       margin-top: 10px;
+      padding: 10px 20px;
+      border: 2px solid white;
+      border-radius: 5px;
+      transition: color 0.3s, background-color 0.3s, border-color 0.3s;
     }
 
     .center-content a:hover {
-      text-decoration: underline;
+      color: black;
+      background-color: white;
+      border-color: white;
     }
   </style>
 </head>
