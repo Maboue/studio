@@ -15,71 +15,38 @@
     body, html {
       height: 100%;
       font-family: 'Playfair Display', serif;
+      color: white;
     }
 
-    /* Background image and opacity */
+    /* Set background image */
     body {
-      background: url('https://via.placeholder.com/300') no-repeat center center;
-      background-size: cover; /* Ensures the background covers the entire screen */
-      position: relative;
-      overflow-y: auto; /* Makes the page scrollable */
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity here */
-      z-index: -1; /* Place the overlay behind content */
+      background: url('PhotoSiteBack.jpg') no-repeat center center fixed;
+      background-size: cover; /* Ensures the image covers the entire screen */
+      height: 100vh; /* Makes sure the body takes the full height of the screen */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
 
     /* Centered content styling */
     .center-content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-      flex-direction: column;
+      max-width: 600px; /* Adjust this based on your desired width */
+      margin: 0 auto;
       padding: 20px;
     }
 
     /* Paragraph styling */
     .center-content p {
-      color: white;
-      font-size: 1.8em; /* Adjusted text size for better visibility */
+      font-size: 2em;
       line-height: 1.6;
-      max-width: 500px; /* Slightly narrower width */
-      margin: 0 auto 20px;
     }
 
-    /* Link styling */
-    .center-content a {
-      color: white; /* Initial link color */
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 20px;
-      padding: 10px 20px;
-      border: 2px solid white;
-      border-radius: 5px;
-      transition: color 0.3s, background-color 0.3s, border-color 0.3s;
-    }
-
-    .center-content a:hover {
-      color: black;
-      background-color: white;
-      border-color: white;
-    }
   </style>
 </head>
 <body>
   <div class="center-content">
-    <p>l’art comme trait d’union, <br> entre le visible et l’invisible.
-    </p>
-    <a href="mailto:so@maboue.com">Get in Touch</a>
+    <p>l’art comme trait d’union,<br> entre le visible et l’invisible.</p>
   </div>
 </body>
 </html>
