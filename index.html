@@ -22,12 +22,11 @@
       background: url('PhotoSiteBack.jpg') no-repeat center center fixed;
       background-size: cover;
       position: relative;
-      overflow-y: auto; /* Make page scrollable */
     }
 
     body::before {
       content: '';
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
@@ -41,27 +40,18 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      height: 100%;
       text-align: center;
-      flex-direction: column;
-      padding: 20px;
-    }
-
-    /* Paragraph styling */
-    .center-content p {
       color: white;
-      font-size: 1.2em;
-      line-height: 1.6;
-      max-width: 600px; /* Slightly narrower width */
-      margin: 0 auto 20px;
+      font-size: 1.5em; /* Adjust font size as needed */
+      flex-direction: column;
     }
 
-    /* Link styling */
     .center-content a {
       color: white; /* Initial link color */
       text-decoration: none;
       font-weight: bold;
-      margin-top: 20px;
+      margin-top: 10px;
       padding: 10px 20px;
       border: 2px solid white;
       border-radius: 5px;
@@ -77,8 +67,9 @@
 </head>
 <body>
   <div class="center-content">
-    <p>"L’art comme trait d’union, entre le visible et l’invisible.
-    "</p>
+    <p>En collaboration étroite avec les designers, je crée des œuvres d’art sur mesure, en parfaite harmonie avec les espaces qu’ils imaginent, les matériaux qu’ils choisissent et les récits qu’ils tissent. 
+Pour que l’art puisse agir comme un trait d’union, entre le visible et l’invisible
+</p>
     <a href="mailto:your-email@example.com">Get in Touch</a>
   </div>
 </body>
