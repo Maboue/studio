@@ -1,1 +1,98 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    /* General styling */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden; /* Hide horizontal scrollbar */
+    }
+
+    /* Container for the images */
+    .carousel-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Styling for the image track */
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+      height: 100%;
+    }
+
+    /* Individual images */
+    .carousel-track img {
+      width: 100vw; /* Make images full width */
+      height: 100vh; /* Make images full height */
+      object-fit: cover; /* Make sure images cover the container */
+    }
+
+    /* Arrow buttons */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0);
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 24px;
+      border: none;
+      z-index: 10;
+    }
+
+    .arrow-left {
+      left: 20px;
+    }
+
+    .arrow-right {
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Carousel container -->
+  <div class="carousel-container">
+    <!-- Carousel track -->
+    <div class="carousel-track">
+      <img src="IMG_9882.jpeg" alt="Image 1">
+      <img src="kitchen02.jpeg" alt="Image 2">
+		<img src="IMG_9882.jpeg" alt="Image 1">
+ 		<img src="Basket.jpeg" alt="Image 1">
+		<img src="IMG_9882.jpeg" alt="Image 1">
+      <img src="Light.jpeg" alt="Image 2">
+ 		<img src="IMG_9882.jpeg" alt="Image 1">
+      <img src="Orange.jpeg" alt="Image 2">
+		<img src="IMG_9882.jpeg" alt="Image 1">
+    </div>
+
+    <!-- Left and Right arrows -->
+    <button class="arrow arrow-left" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="arrow arrow-right" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+
+  <script>
+    let currentIndex = 0;
+
+    // Function to move the slide
+    function moveSlide(direction) {
+      const track = document.querySelector('.carousel-track');
+      const totalSlides = document.querySelectorAll('.carousel-track img').length;
+      
+      currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+      track.style.transform = `translateX(-${currentIndex * 100}vw)`;
+    }
+  </script>
+
+</body>
+</html>
