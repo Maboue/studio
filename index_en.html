@@ -39,8 +39,9 @@
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.3);
-      z-index: -1;
+      z-index: -2;
     }
+
 
     /* Title styling */
     .title {
@@ -63,6 +64,7 @@
       max-width: 600px;
       margin: 0 auto;
       padding: 20px;
+      position: relative; /* To stack correctly with rectangle */
     }
 
     .circle {
@@ -79,7 +81,7 @@
 
     .content-below a {
       display: inline-block;
-      margin: 20px 0;
+      margin: 20px 0 30px 0; /* Added bottom margin */
       padding: 12px 25px;
       color: white;
       text-decoration: none;
@@ -140,27 +142,28 @@
   </style>
 </head>
 <body>
+  <!-- Rectangle background -->
+  <div class="rectangle-background"></div>
+
   <!-- Title and Subtitle -->
   <div class="center-content">
     <h1 class="title">Studio Maboue</h1>
-    <p class="subtitle">AN ART STUDIO DEDICATED TO CREATING CUSTOM PIECES THAT INTEGRATE SEEMLESSLY INTO EVERY SPACE.
-    </p>
+    <p class="subtitle">AN ART STUDIO DEDICATED TO CREATING CUSTOM PIECES THAT INTEGRATE SEEMLESSLY INTO THE SPACES THEY ARE DESIGNED FOR.
+</p>
 
     <!-- Circle above paragraphs -->
     <div class="circle"></div>
 
     <!-- Paragraphs and Button -->
     <div class="content-below">
+      
       <p>
-        Un atelier d'art visuel dédié à la création d’œuvres sur mesure, en parfaite harmonie avec les espaces, les matériaux et les visions des équipes de design et des clients.
+        En étroite collaboration avec les équipes de design, nous concevons des oeuvres uniques qui s’intègrent naturellement à leurs projets.
       </p>
       <p>
-        En étroite collaboration avec les designers, nous concevons des oeuvres uniques qui s’intègrent naturellement à leurs projets.
+        L'art comme trait d'union, entre le visible et l'invisible.
       </p>
-      <p>
-        Une démarche grâce à laquelle l’art semble dialoguer avec l’espace, ses matériaux et ceux qui l’habitent.
-      </p>
-      <a href="mailto:so@maboue.com">NOUS CONTACTER</a>
+      <a href="mailto:so@maboue.com">GET IN TOUCH</a>
     </div>
   </div>
 
