@@ -3,108 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>Thumbnail Carousel with Arrows</title>
   <style>
-    /* General styling */
+    /* General Styling */
     body, html {
       margin: 0;
       padding: 0;
-      height: 100%;
-      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
     }
 
-    /* Container for the images */
+    /* Carousel Container */
     .carousel-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 50px auto;
+      text-align: center;
       position: relative;
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
     }
 
-    /* Styling for the image track */
-    .carousel-track {
-      display: flex;
-      transition: transform 0.5s ease;
-      height: 100%;
-    }
-
-    /* Individual images */
-    .carousel-track img {
-      width: 100vw;
-      height: 100vh;
+    /* Main Image */
+    .main-image {
+      width: 100%;
+      max-height: 800px;
       object-fit: cover;
+      border-radius: 4px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    /* Single-line arrows */
+    /* Arrows */
     .arrow {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       width: 30px;
       height: 30px;
-      border: solid white;
+      border: solid black;
       border-width: 0 3px 3px 0;
-      display: inline-block;
       cursor: pointer;
       z-index: 10;
     }
 
     .arrow-left {
-      left: 20px;
-      transform: translateY(-50%) rotate(135deg); /* Rotates to point left */
+      left: -50px;
+      transform: translateY(-50%) rotate(135deg); /* Rotate to point left */
     }
 
     .arrow-right {
-      right: 20px;
-      transform: translateY(-50%) rotate(-45deg); /* Rotates to point right */
+      right: -50px;
+      transform: translateY(-50%) rotate(-45deg); /* Rotate to point right */
     }
 
-    /* Hover effect */
     .arrow:hover {
-      border-color: rgba(255, 255, 255, 0.7);
+      border-color: rgba(0, 0, 0, 0.7);
+    }
+
+    /* Thumbnail Container */
+    .thumbnail-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* Thumbnails */
+    .thumbnail {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border: 2px solid transparent;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: border-color 0.3s ease;
+    }
+
+    .thumbnail:hover,
+    .thumbnail.active {
+      border-color: #007bff;
     }
   </style>
 </head>
 <body>
-
-  <!-- Carousel container -->
   <div class="carousel-container">
-    <!-- Carousel track -->
-    <div class="carousel-track">
-      
-      <img src="IMG_4201.jpeg" alt="Image 2">
-      <img src="IMG_9881.jpeg" alt="Image 5">
-      <img src="IMG_4221.jpeg" alt="Image 5">
-      <img src="IMG_9708.jpeg" alt="Image 5">
-      <img src="IMG_4252.jpeg" alt="Image 5">
-      <img src="IMG_4199.jpeg" alt="Image 1">
-      <img src="IMG_9883.jpeg" alt="Image 5">
-      <img src="IMG_4208.jpeg" alt="Image 1">
-      <img src="IMG_9894.jpeg" alt="Image 5">
-      <img src="IMG_4202.jpeg" alt="Image 2">
-      <img src="IMG_4209.jpeg" alt="Image 3">
-      <img src="IMG_8978.jpeg" alt="Image 5">
-      <img src="IMG_4252.jpeg" alt="Image 4">
+    <!-- Left Arrow -->
+    <div class="arrow arrow-left" onclick="navigate(-1)"></div>
 
+    <!-- Main Display Image -->
+    <img id="mainImage" class="main-image" src="Basket.jpeg" alt="Main Image">
+
+    <!-- Right Arrow -->
+    <div class="arrow arrow-right" onclick="navigate(1)"></div>
+
+    <!-- Thumbnails -->
+    <div class="thumbnail-container">
+      <img class="thumbnail active" src="IMG_4207.jpeg" alt="Thumbnail 1" onclick="changeImage('IMG_4207.jpeg', this)">
+      <img class="thumbnail" src="IMG_4201.jpeg" alt="Thumbnail 2" onclick="changeImage('IMG_4201.jpeg', this)">
+      <img class="thumbnail" src="IMG_4208.jpeg" alt="Thumbnail 3" onclick="changeImage('IMG_4208.jpeg', this)">
+      <img class="thumbnail" src="IMG_4221.jpeg" alt="Thumbnail 4" onclick="changeImage('IMG_4221.jpeg', this)">
+      <img class="thumbnail" src="IMG_4252.jpeg" alt="Thumbnail 5" onclick="changeImage('IMG_4252.jpeg', this)">
     </div>
-
-    <!-- Single-line Left and Right arrows -->
-    <div class="arrow arrow-left" onclick="moveSlide(-1)"></div>
-    <div class="arrow arrow-right" onclick="moveSlide(1)"></div>
   </div>
 
   <script>
     let currentIndex = 0;
+    const images = [
+      "IMG_4207.jpeg",
+      "IMG_4201.jpeg",
+      "IMG_4208.jpeg",
+      "IMG_4221.jpeg",
+      "IMG_4252.jpeg"
+    ];
 
-    // Function to move the slide
-    function moveSlide(direction) {
-      const track = document.querySelector('.carousel-track');
-      const totalSlides = document.querySelectorAll('.carousel-track img').length;
+    // Change the main image based on the selected thumbnail
+    function changeImage(imageSrc, clickedThumbnail) {
+      const mainImage = document.getElementById('mainImage');
+      mainImage.src = imageSrc;
 
-      currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
-      track.style.transform = `translateX(-${currentIndex * 100}vw)`;
+      // Update the active thumbnail
+      const thumbnails = document.querySelectorAll('.thumbnail');
+      thumbnails.forEach(thumb => thumb.classList.remove('active'));
+      clickedThumbnail.classList.add('active');
+
+      currentIndex = images.indexOf(imageSrc); // Update current index
+    }
+
+    // Navigate through images using arrows
+    function navigate(direction) {
+      currentIndex = (currentIndex + direction + images.length) % images.length;
+      const mainImage = document.getElementById('mainImage');
+      mainImage.src = images[currentIndex];
+
+      // Update the active thumbnail
+      const thumbnails = document.querySelectorAll('.thumbnail');
+      thumbnails.forEach(thumb => thumb.classList.remove('active'));
+      thumbnails[currentIndex].classList.add('active');
     }
   </script>
-
 </body>
 </html>
