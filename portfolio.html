@@ -29,11 +29,6 @@
       object-fit: cover;
       border-radius: 4px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      visibility: hidden; /* Hide until fully loaded */
-    }
-
-    .main-image.loaded {
-      visibility: visible; /* Show when loaded */
     }
 
     /* Arrows */
@@ -95,23 +90,23 @@
     <div class="arrow arrow-left" onclick="navigate(-1)"></div>
 
     <!-- Main Display Image -->
-    <img id="mainImage" class="main-image" src="Basket.jpeg" alt="Main Image" onload="imageLoaded()">
+    <img id="mainImage" class="main-image" src="IMG_4201.jpeg" alt="Main Image">
 
     <!-- Right Arrow -->
     <div class="arrow arrow-right" onclick="navigate(1)"></div>
 
     <!-- Thumbnails -->
     <div class="thumbnail-container">
-      <img class="thumbnail" src="IMG_4201.jpeg" alt="Thumbnail 2" onclick="changeImage('IMG_4201.jpeg', this)">
+      <img class="thumbnail active" src="IMG_4201.jpeg" alt="Thumbnail 1" onclick="changeImage('IMG_4201.jpeg', this)">
       <img class="thumbnail" src="IMG_4207.jpeg" alt="Thumbnail 2" onclick="changeImage('IMG_4207.jpeg', this)">
       <img class="thumbnail" src="IMG_4208.jpeg" alt="Thumbnail 3" onclick="changeImage('IMG_4208.jpeg', this)">
       <img class="thumbnail" src="IMG_4221.jpeg" alt="Thumbnail 4" onclick="changeImage('IMG_4221.jpeg', this)">
       <img class="thumbnail" src="IMG_4252.jpeg" alt="Thumbnail 5" onclick="changeImage('IMG_4252.jpeg', this)">
-      <img class="thumbnail" src="IMG_9894.jpeg" alt="Thumbnail 2" onclick="changeImage('IMG_9894.jpeg', this)">
-      <img class="thumbnail" src="IMG_9884.jpeg" alt="Thumbnail 2" onclick="changeImage('IMG_9884.jpeg', this)">
-      <img class="thumbnail" src="IMG_9883.jpeg" alt="Thumbnail 3" onclick="changeImage('IMG_9883.jpeg', this)">
-      <img class="thumbnail" src="IMG_9881.jpeg" alt="Thumbnail 4" onclick="changeImage('IMG_9881.jpeg', this)">
-      <img class="thumbnail" src="IMG_8978.jpeg" alt="Thumbnail 5" onclick="changeImage('IMG_8978.jpeg', this)">
+      <img class="thumbnail" src="IMG_9894.jpeg" alt="Thumbnail 6" onclick="changeImage('IMG_9894.jpeg', this)">
+      <img class="thumbnail" src="IMG_9884.jpeg" alt="Thumbnail 7" onclick="changeImage('IMG_9884.jpeg', this)">
+      <img class="thumbnail" src="IMG_9883.jpeg" alt="Thumbnail 8" onclick="changeImage('IMG_9883.jpeg', this)">
+      <img class="thumbnail" src="IMG_9881.jpeg" alt="Thumbnail 9" onclick="changeImage('IMG_9881.jpeg', this)">
+      <img class="thumbnail" src="IMG_8978.jpeg" alt="Thumbnail 10" onclick="changeImage('IMG_8978.jpeg', this)">
     </div>
   </div>
 
@@ -122,19 +117,13 @@
       "IMG_4207.jpeg",
       "IMG_4208.jpeg",
       "IMG_4221.jpeg",
-      "IMG_4252.jpeg"
+      "IMG_4252.jpeg",
       "IMG_9894.jpeg",
       "IMG_9884.jpeg",
       "IMG_9883.jpeg",
       "IMG_9881.jpeg",
       "IMG_8978.jpeg"
     ];
-
-    // Ensure main image is visible only after it's fully loaded
-    function imageLoaded() {
-      const mainImage = document.getElementById('mainImage');
-      mainImage.classList.add('loaded');
-    }
 
     // Change the main image based on the selected thumbnail
     function changeImage(imageSrc, clickedThumbnail) {
