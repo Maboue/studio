@@ -19,14 +19,14 @@
       max-width: 800px;
       margin: 50px auto;
       text-align: center;
-      position: relative;
+      position: relative; /* Ensure arrows are positioned within this container */
     }
 
     /* Main Image */
     .main-image {
       width: 100%;
       max-height: 800px;
-      object-fit: cover; '
+      object-fit: cover;
       border-radius: 4px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
@@ -41,16 +41,16 @@
       border: solid black;
       border-width: 0 3px 3px 0;
       cursor: pointer;
-      z-index: 10;
+      z-index: 10; /* Ensure arrows are above images */
     }
 
     .arrow-left {
-      left: -50px;
+      left: 20px; /* Adjust as needed */
       transform: translateY(-50%) rotate(135deg); /* Rotate to point left */
     }
 
     .arrow-right {
-      right: -50px;
+      right: 20px; /* Adjust as needed */
       transform: translateY(-50%) rotate(-45deg); /* Rotate to point right */
     }
 
@@ -109,7 +109,6 @@
       <img class="thumbnail" src="IMG_9883.jpeg" alt="Thumbnail 8" onclick="changeImage('IMG_9883.jpeg', this)">
       <img class="thumbnail" src="IMG_9881.jpeg" alt="Thumbnail 9" onclick="changeImage('IMG_9881.jpeg', this)">
       <img class="thumbnail" src="IMG_9894.jpeg" alt="Thumbnail 6" onclick="changeImage('IMG_9894.jpeg', this)">
-      
   </div>
 
   <script>
