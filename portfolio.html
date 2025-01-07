@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thumbnail Carousel with Arrows</title>
+  <title>Thumbnail Carousel with Arrows Fixed to Top</title>
   <style>
     /* General Styling */
     body, html {
@@ -34,8 +34,8 @@
     /* Arrows */
     .arrow {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 10px; /* Fixed position from the top of the image */
+      transform: translateY(0); /* Reset vertical translation */
       width: 30px;
       height: 30px;
       border: solid white;
@@ -45,17 +45,17 @@
     }
 
     .arrow-left {
-      left: 20px; /* Adjust as needed */
-      transform: translateY(-50%) rotate(135deg); /* Rotate to point left */
+      left: 10px; /* Adjust as needed */
+      transform: translateY(0) rotate(135deg); /* Rotate to point left */
     }
 
     .arrow-right {
-      right: 20px; /* Adjust as needed */
-      transform: translateY(-50%) rotate(-45deg); /* Rotate to point right */
+      right: 10px; /* Adjust as needed */
+      transform: translateY(0) rotate(-45deg); /* Rotate to point right */
     }
 
     .arrow:hover {
-      border-color: rgba(0, 0, 0, 0.7);
+      border-color: rgba(255, 255, 255, 0.7); /* Change hover color */
     }
 
     /* Thumbnail Container */
