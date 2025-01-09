@@ -17,9 +17,9 @@
     .carousel-container {
       width: 100%;
       max-width: 800px;
-      margin: 50px auto;
+      margin: 20px auto;
       text-align: center;
-      position: relative; /* Ensure arrows are positioned within this container */L 
+      position: relative; /* Ensure arrows are positioned correctly */
     }
 
     /* Main Image */
@@ -34,8 +34,8 @@
     /* Arrows */
     .arrow {
       position: absolute;
-      top: 400px; /* Fixed position from the top of the image */
-      transform: translateY(0); /* Reset vertical translation */
+      top: 50%;
+      transform: translateY(-50%);
       width: 30px;
       height: 30px;
       border: solid white;
@@ -45,17 +45,17 @@
     }
 
     .arrow-left {
-      left: 20px; /* Adjust as needed */
-      transform: translateY(0) rotate(135deg); /* Rotate to point left */
+      left: 20px;
+      transform: translateY(-50%) rotate(135deg);
     }
 
     .arrow-right {
-      right: 20px; /* Adjust as needed */
-      transform: translateY(0) rotate(-45deg); /* Rotate to point right */
+      right: 20px;
+      transform: translateY(-50%) rotate(-45deg);
     }
 
     .arrow:hover {
-      border-color: rgba(255, 255, 255, 0.7); /* Change hover color */
+      opacity: 0.7; /* Subtle hover effect */
     }
 
     /* Thumbnail Container */
@@ -82,6 +82,23 @@
     .thumbnail.active {
       border-color: #007bff;
     }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .main-image {
+        max-height: 500px;
+      }
+
+      .arrow {
+        width: 25px;
+        height: 25px;
+      }
+
+      .thumbnail {
+        width: 60px;
+        height: 60px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -98,25 +115,25 @@
     <!-- Thumbnails -->
     <div class="thumbnail-container">
       <img class="thumbnail active" src="IMG_4201.jpeg" alt="Thumbnail 1" onclick="changeImage('IMG_4201.jpeg', this)">
-      <img class="thumbnail" src="IMG_4208.jpeg" alt="Thumbnail 3" onclick="changeImage('IMG_4208.jpeg', this)">
-      <img class="thumbnail" src="IMG_4339.jpeg" alt="Thumbnail 2" onclick="changeImage('IMG_4339.jpeg', this)">
-      <img class="thumbnail" src="IMG_4349.jpeg" alt="Thumbnail 2" onclick="changeImage('IMG_4349.jpeg', this)">
-      <img class="thumbnail" src="IMG_4340.jpeg" alt="Thumbnail 3" onclick="changeImage('IMG_4340.jpeg', this)">
-      <img class="thumbnail" src="IMG_0143.jpeg" alt="Thumbnail 3" onclick="changeImage('IMG_0143.jpeg', this)">
-      <img class="thumbnail" src="IMG_4352.jpeg" alt="Thumbnail 3" onclick="changeImage('IMG_4352.jpeg', this)">
-      <img class="thumbnail" src="IMG_4341.jpeg" alt="Thumbnail 6" onclick="changeImage('IMG_4341.jpeg', this)">
-      <img class="thumbnail" src="IMG_4252.jpeg" alt="Thumbnail 5" onclick="changeImage('IMG_4252.jpeg', this)">
-      <img class="thumbnail" src="IMG_9884.jpeg" alt="Thumbnail 7" onclick="changeImage('IMG_9884.jpeg', this)">
-      <img class="thumbnail" src="IMG_9883.jpeg" alt="Thumbnail 8" onclick="changeImage('IMG_9883.jpeg', this)">
-      <img class="thumbnail" src="IMG_9881.jpeg" alt="Thumbnail 9" onclick="changeImage('IMG_9881.jpeg', this)">
-      <img class="thumbnail" src="IMG_9894.jpeg" alt="Thumbnail 6" onclick="changeImage('IMG_9894.jpeg', this)">
-
-      <img class="thumbnail" src="IMG_0131.jpeg" alt="Thumbnail 5" onclick="changeImage('IMG_0131.jpeg', this)">
-      <img class="thumbnail" src="IMG_0130.jpeg" alt="Thumbnail 7" onclick="changeImage('IMG_0130.jpeg', this)">
-      <img class="thumbnail" src="IMG_0129.jpeg" alt="Thumbnail 8" onclick="changeImage('IMG_0129.jpeg', this)">
-      <img class="thumbnail" src="IMG_0128.jpeg" alt="Thumbnail 9" onclick="changeImage('IMG_0128.jpeg', this)">
-      <img class="thumbnail" src="IMG_0123.jpeg" alt="Thumbnail 6" onclick="changeImage('IMG_0123.jpeg', this)">
-      <img class="thumbnail" src="IMG_0122.jpeg" alt="Thumbnail 6" onclick="changeImage('IMG_0122.jpeg', this)">
+      <img class="thumbnail" src="IMG_4208.jpeg" alt="Thumbnail 2" onclick="changeImage('IMG_4208.jpeg', this)">
+      <img class="thumbnail" src="IMG_4339.jpeg" alt="Thumbnail 3" onclick="changeImage('IMG_4339.jpeg', this)">
+      <img class="thumbnail" src="IMG_4349.jpeg" alt="Thumbnail 4" onclick="changeImage('IMG_4349.jpeg', this)">
+      <img class="thumbnail" src="IMG_4340.jpeg" alt="Thumbnail 5" onclick="changeImage('IMG_4340.jpeg', this)">
+      <img class="thumbnail" src="IMG_0143.jpeg" alt="Thumbnail 6" onclick="changeImage('IMG_0143.jpeg', this)">
+      <img class="thumbnail" src="IMG_4352.jpeg" alt="Thumbnail 7" onclick="changeImage('IMG_4352.jpeg', this)">
+      <img class="thumbnail" src="IMG_4341.jpeg" alt="Thumbnail 8" onclick="changeImage('IMG_4341.jpeg', this)">
+      <img class="thumbnail" src="IMG_4252.jpeg" alt="Thumbnail 9" onclick="changeImage('IMG_4252.jpeg', this)">
+      <img class="thumbnail" src="IMG_9884.jpeg" alt="Thumbnail 10" onclick="changeImage('IMG_9884.jpeg', this)">
+      <img class="thumbnail" src="IMG_9883.jpeg" alt="Thumbnail 11" onclick="changeImage('IMG_9883.jpeg', this)">
+      <img class="thumbnail" src="IMG_9881.jpeg" alt="Thumbnail 12" onclick="changeImage('IMG_9881.jpeg', this)">
+      <img class="thumbnail" src="IMG_9894.jpeg" alt="Thumbnail 13" onclick="changeImage('IMG_9894.jpeg', this)">
+      <img class="thumbnail" src="IMG_0131.jpeg" alt="Thumbnail 14" onclick="changeImage('IMG_0131.jpeg', this)">
+      <img class="thumbnail" src="IMG_0130.jpeg" alt="Thumbnail 15" onclick="changeImage('IMG_0130.jpeg', this)">
+      <img class="thumbnail" src="IMG_0129.jpeg" alt="Thumbnail 16" onclick="changeImage('IMG_0129.jpeg', this)">
+      <img class="thumbnail" src="IMG_0128.jpeg" alt="Thumbnail 17" onclick="changeImage('IMG_0128.jpeg', this)">
+      <img class="thumbnail" src="IMG_0123.jpeg" alt="Thumbnail 18" onclick="changeImage('IMG_0123.jpeg', this)">
+      <img class="thumbnail" src="IMG_0122.jpeg" alt="Thumbnail 19" onclick="changeImage('IMG_0122.jpeg', this)">
+    </div>
   </div>
 
   <script>
@@ -135,13 +152,12 @@
       "IMG_9883.jpeg",
       "IMG_9881.jpeg",
       "IMG_9894.jpeg",
-
       "IMG_0131.jpeg",
       "IMG_0130.jpeg",
       "IMG_0129.jpeg",
       "IMG_0128.jpeg",
       "IMG_0123.jpeg",
-      "IMG_0122.jpeg",
+      "IMG_0122.jpeg"
     ];
 
     // Change the main image based on the selected thumbnail
