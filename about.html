@@ -138,6 +138,25 @@
     .language-switch a:hover {
       color: #f1f1f1;
     }
+
+    /* Profile picture styling */
+    .profile-picture {
+      position: absolute;
+      bottom: 150px; /* Position it even closer to the button */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px; /* Circle width */
+      height: 100px; /* Circle height */
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid white; /* Optional border */
+    }
+
+    .profile-picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   </style>
 </head>
 <body>
@@ -147,18 +166,16 @@
   <!-- Title and Subtitle -->
   <div class="center-content">
     <h1 class="title"></h1>
-    <p class="subtitle">
-</p>
+    <p class="subtitle"></p>
 
     <!-- Circle above paragraphs -->
     <div class="circle"></div>
 
     <!-- Paragraphs and Button -->
     <div class="content-below">
-      
       <p>
-Artiste, Femme, Maman, Amoureuse. <br> Exploratrice de la psychée. <br> Chercheuse de beauté et d'harmonie. <br> Entrepreneure. <br> Baccalauréat en art visuel, Concordia university. <br> Microprogramme en Art Thérapie, UQAT. <br>
-      
+        Artiste, Femme, Maman, Amoureuse. <br> Exploratrice de la psychée. <br> Chercheuse de beauté et d'harmonie. <br> Entrepreneure. <br> Baccalauréat en art visuel, Concordia university. <br> Microprogramme en Art Thérapie, UQAT. <br>
+      </p>
       <a href="mailto:so@maboue.com">ME CONTACTER</a>
     </div>
   </div>
@@ -173,5 +190,11 @@ Artiste, Femme, Maman, Amoureuse. <br> Exploratrice de la psychée. <br> Cherche
   <div class="language-switch">
     <a href="index.html">FR</a> | <a href="index_en.html">EN</a>
   </div>
+
+  <!-- Profile Picture -->
+  <div class="profile-picture">
+    <img src="IMG_0143.jpeg" alt="Profile picture of the artist">
+  </div>
+
 </body>
 </html>
