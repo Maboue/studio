@@ -1,1 +1,179 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Maboue</title>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Playfair Display', serif;
+      color: white;
+    }
+
+    /* Background image with overlay */
+    body {
+      background: url('IMG_4252.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: center;
+      position: relative;
+      padding-top: 50px;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: -2;
+    }
+
+
+    /* Title styling */
+    .title {
+      font-family: 'Abril Fatface', cursive;
+      font-size: 4em;
+      font-weight: 400;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    /* Subtitle styling */
+    .subtitle {
+      font-size: 28px;
+      margin-bottom: 50px;
+    }
+
+    /* Centered content styling */
+    .center-content {
+      max-width: 675px;
+      margin: 0 auto;
+      padding: 20px;
+      position: relative; /* To stack correctly with rectangle */
+    }
+
+    .circle {
+      border: 1px solid white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 10px auto;
+    }
+
+    .content-below {
+      margin-top: 50px;
+    }
+
+    .content-below a {
+      display: inline-block;
+      margin: 20px 0 30px 0; /* Added bottom margin */
+      padding: 12px 25px;
+      color: white;
+      text-decoration: none;
+      border: 1px solid white;
+      border-radius: 20px;
+      transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+    }
+
+    .content-below a:hover {
+      color: black;
+      background-color: white;
+      border-color: white;
+    }
+
+    .content-below p {
+      font-size: 20px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    /* Navigation menu */
+    .top-menu {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 16px;
+    }
+
+    .top-menu a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      transition: color 0.3s;
+    }
+
+    .top-menu a:hover {
+      color: #f1f1f1;
+    }
+
+    /* Language switcher */
+    .language-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 16px;
+    }
+
+    .language-switch a {
+      color: white;
+      text-decoration: none;
+      margin-left: 10px;
+      transition: color 0.3s;
+    }
+
+    .language-switch a:hover {
+      color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Rectangle background -->
+  <div class="rectangle-background"></div>
+
+  <!-- Title and Subtitle -->
+  <div class="center-content">
+    <h1 class="title">Soleil Fleming</h1>
+    <p class="subtitle">AMOUREUSE DE TEXTURES <br> HUMAINES & AMBIANTES. <br> ARTISTE VISUELLE.
+</p>
+
+    <!-- Circle above paragraphs -->
+    <div class="circle"></div>
+
+    <!-- Paragraphs and Button -->
+    <div class="content-below">
+      
+      <p>
+Je collabore avec des équipes de design pour créer des oeuvres qui s'intégrent naturellement aux histoires qu’ils racontent & aux espaces qu'ils concoivent.
+      </p>
+      <a href="mailto:so@maboue.com">ME CONTACTER</a>
+    </div>
+  </div>
+
+  <!-- Navigation Menu -->
+  <div class="top-menu">
+    <a href="about.html">À PROPOS</a>
+    <a href="portfolio.html">PORTFOLIO</a>
+  </div>
+
+  <!-- Language Switcher -->
+  <div class="language-switch">
+    <a href="index.html">FR</a> | <a href="index_en.html">EN</a>
+  </div>
+</body>
+</html>
