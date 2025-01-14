@@ -150,7 +150,21 @@
     <h1 class="title"></h1>
     <p class="subtitle">
 </p>
+    
+.profile-picture {
+  margin: 30px auto 0 auto; /* Add spacing above the picture */
+  width: 100px; /* Circle width */
+  height: 100px; /* Circle height */
+  border-radius: 50%; /* Makes it circular */
+  overflow: hidden; /* Ensures the image fits inside the circle */
+  border: 2px solid white; /* Optional: border around the circle */
+}
 
+.profile-picture img {
+  width: 100%; /* Ensure the image covers the circle */
+  height: 100%; /* Ensure the image covers the circle */
+  object-fit: cover; /* Keeps the aspect ratio and fills the circle */
+}
     <!-- Circle above paragraphs -->
     <div class="circle"></div>
 
@@ -170,9 +184,14 @@ Artiste, Femme, Maman, Amoureuse. <br> Exploratrice de la psychée. <br> Cherche
     <a href="portfolio.html">PORTFOLIO</a>
   </div>
 
-  <!-- Language Switcher -->
-  <div class="language-switch">
-    <a href="index.html">FR</a> | <a href="index_en.html">EN</a>
-  </div>
+<!-- Language Switcher -->
+<div class="language-switch">
+  <a href="index.html">FR</a> | <a href="index_en.html">EN</a>
+</div>
+
+<!-- Circular profile image -->
+<div class="profile-picture">
+  <img src="IMG_0143.jpeg" alt="Profile picture of the artist">
+</div>
 </body>
 </html>
