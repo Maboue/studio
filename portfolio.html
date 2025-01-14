@@ -4,14 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Full-Screen Slideshow (Aspect Ratio Preserved)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* General Styling */
-    body, html {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
       height: 100%;
-      font-family: Arial, sans-serif;
+      font-family: 'Playfair Display', serif;
       background-color: #000; /* Dark background for better focus on art */
+      color: white;
+    }
+
+    /* Navigation Menu */
+    .top-menu {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 16px;
+      z-index: 100;
+    }
+
+    .top-menu a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      transition: color 0.3s;
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+    }
+
+    .top-menu a:hover {
+      color: #f1f1f1;
     }
 
     /* Carousel Container */
@@ -64,6 +91,11 @@
   </style>
 </head>
 <body>
+  <!-- Navigation Menu -->
+  <div class="top-menu">
+    <a href="index.html">HOME</a>
+  </div>
+
   <div class="carousel-container">
     <!-- Left Arrow -->
     <div class="arrow arrow-left" onclick="navigate(-1)"></div>
@@ -78,8 +110,6 @@
   <script>
     let currentIndex = 0;
     const images = [
-
-     
       "IMG_0143.jpeg",
       "IMG_4201.jpeg",
       "IMG_4252.jpeg",
